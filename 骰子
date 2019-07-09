@@ -1,0 +1,27 @@
+# 模块random包含以各种方式生产随机数的函数,模块中的randint()函数返回一个位于指定范围内的整数
+from random import randint
+
+# # 参数1，6 返回的是1-6之间的随机一个数 包括1和6
+# x = randint(1,6)
+# print(x)
+
+# 投骰子 投十次 默认值是6 如果投到6的话就停止
+class Die():
+    def __init__(self,):
+        """初始化属性"""
+        self.sides = 6
+
+    def roll_die(self):
+        num = 0
+        while num<10:
+            self.x = randint(1,6)
+            if self.x == self.sides:
+                print('恭喜你投对了 当前骰子数：'+str(self.x))
+                break
+            else:
+                print('第'+str(num)+'次骰子数为:'+str(self.x))
+                num=num+1
+
+sz = Die()
+
+sz.roll_die()
